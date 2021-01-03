@@ -1,0 +1,66 @@
+.about
+    padding-top: 120px
+    &__wrapper
+        display: grid
+        grid-template-columns: 525px 580px
+        grid-template-rows:  minmax(240px, auto) minmax(195px, auto)
+        grid-auto-rows: minmax(290px, auto)
+        column-gap: 35px
+        row-gap: 15px
+
+    &__photo
+        grid-row: 1/3
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+
+    &__descr
+        padding-top: 6px
+        .divider
+            margin: 0
+
+    &__title
+        position: relative
+        @include before_circle
+        padding-left: 12px
+        padding-top: 1px
+
+    &__text
+        
+        font-size: 14px
+        line-height: 21px
+        margin-top: 20px
+        margin-bottom: 0
+        span.oben
+            display: none
+
+
+    &__skills
+        display: grid
+        grid-template-columns: 265px 1fr
+        colums-gap: 20px
+
+        &-item
+            display: grid
+            grid-template-columns: 40px 1fr
+            column-gap: 10px
+            .m1200
+                display: none
+
+        &-circle
+            position: relative
+            padding: 15px 0 0 15px
+            @include before_circle
+            &::before
+                top: 0
+
+        &-text
+            font-size: 12px
+            line-height: 18px
+            margin-top: 6px
+            a 
+                color: #FFA501
+                border-bottom: 1px dotted #000
+                text-decoration: none
+            

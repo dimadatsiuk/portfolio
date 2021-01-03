@@ -1,0 +1,698 @@
+
+/** pizdahuinia    
+ **/    
+@media (max-width : 1439px)
+
+    .sidepanel
+        display: none
+    
+    
+@media (max-width : 1200px)
+
+    .container
+        max-width: 960px
+
+
+    .promo
+        padding-top: 160px
+
+
+    .about
+        padding-top: 80px
+
+        &__wrapper
+            grid-template-columns: 430px 500px
+            column-gap: 30px
+
+
+
+
+        &__skills
+            display: grid
+            grid-template-columns: 260px 1fr
+            column-gap: 15px
+
+            &-item
+                display: grid
+                grid-template-columns: none
+                grid-template-rows: 45px 1fr
+                .desctop
+                    display: none
+                .m1200
+                    display: block
+
+            &-circle
+                display: grid
+                grid-template-columns: 36px 1fr
+                position: relative
+                padding: 15px 0 0 15px
+                @include before_circle
+                &::before
+                    top: 0
+
+            &-text
+                font-size: 12px
+                line-height: 18px
+                margin-top: 6px
+
+
+    .resume
+        padding-top: 80px
+        
+        &__wrapper
+            padding-left: 20px
+            grid-template-columns: 420px 500px
+
+        &__photo
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+
+    .use
+        padding-top: 80px
+
+        &__wrapper
+            width: 856px
+            margin: 0 auto
+            grid-template-columns: repeat(3, 270px)
+
+
+    .skills_percent
+
+        &__skills-wrapper
+            
+            grid-template-columns: repeat(3, 300px)
+            column-gap: 28px
+
+
+    .portfolio
+        padding-top: 80px
+
+        &__wrapper
+            width: auto
+            grid-template-columns: repeat(2, 475px)
+            grid-template-rows: repeat(2, 200px)
+            gap: 7px 10px
+            a
+
+                .grid
+                    padding: 0
+                    figure
+                        img 
+                            width: 100%
+                        figcaption
+                            padding: 24px   
+                            p 
+                                padding: 15px 2.5em
+                                font: 300 11px/1.8 'Raleway', sans-serif
+                            &::before, &::after
+                                /** width: 425px **/
+                                height: 170px
+                                right: 25px
+                                bottom: 25px
+                                left: 25px
+
+
+    .reviews
+        padding-top: 80px
+
+
+    .contacts
+        padding-top: 80px
+        padding-bottom: 50px
+        &__wrapper
+            padding: 0
+            grid-template-columns: 400px 530px
+            column-gap: 30px
+
+
+        &__form
+            grid-template-columns: repeat(2, 255px)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 991px)
+    .container
+        max-width: 720px
+
+    .promo
+        .wrapper 
+            padding-left: 60px
+
+        &__title
+            font-size: 34px
+
+
+    .about
+        
+        &__wrapper
+            grid-template-columns: 380px 300px
+            column-gap: 35px
+
+        &__photo
+            object-fit: cover
+
+        &__subtitle
+            font-size: 26px
+            line-height: 50px
+
+
+        &__skills
+            grid-template-columns: none
+            grid-template-rows: minmax(80px, auto) minmax(80px, auto)
+            row-gap: 15px
+            &-item
+
+
+    .resume
+        &__wrapper
+            padding-left: 5px
+            grid-template-columns: 300px 400px
+            column-gap: 15px
+
+        &__item
+            &::before
+                width: 30px
+
+            &-head
+                padding-left: 85px
+
+            &-icon
+                left: 30px
+
+            &-body
+                padding-left: 28px
+
+
+    .use
+        &__wrapper
+            width: 590px
+            grid-template-columns: repeat(2, 270px)
+            gap: 20px 30px
+
+
+    .skills_percent
+
+        &__skills-wrapper
+            grid-template-columns: repeat(2, 150px)
+            column-gap: 0
+            justify-content: space-around
+
+
+
+
+
+
+
+
+    .portfolio
+
+        &__wrapper
+            width: auto
+            grid-template-columns: repeat(2, 355px)
+            grid-template-rows: repeat(2, 145px)
+            gap: 10px 10px
+            a
+
+                .grid
+                    padding: 0
+                    figure
+                        background: black
+                        img 
+                            width: 100%
+                        figcaption
+                            width: 100%
+                            padding: 1em
+                            h2
+                                padding-top: 10%
+                                font-weight: 300
+                                font-size: 20px
+                            p 
+                                display: none
+                            &::before, &::after
+                                opacity: 1
+                                transform: inherit
+                                position: absolute
+                                height: 128px
+                                /** width: 333px **/
+                                top: 10px
+                                left: 10px
+                                right: 10px
+
+
+
+
+
+
+
+                   
+
+
+
+
+
+
+
+    .reviews
+        &__subtitle
+            font-size: 33px
+
+        &__carousel 
+            .slick-prev
+                left: -55px
+            .slick-next
+                right: -55px
+
+
+
+    .contacts
+
+        &__subtitle
+            font-size: 33px
+        &__wrapper
+            grid-template-columns: repeat(2, 350px)
+            column-gap: 20px
+
+
+        &__photo
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+
+        &__form
+            grid-template-columns: 350px
+            grid-template-rows: 45px 45px 190px 45px
+            row-gap: 25px
+
+        &__input
+
+            &-1
+                grid-row: 1/2
+            &-2
+                grid-row: 2/3
+
+        &__triggers
+            column-gap: 25px
+
+
+        &__btn
+            width: 150px
+            padding: 0
+                
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+@media  (max-width: 767px)
+    .container
+        max-width: 540px
+
+    .promo
+        padding-top: 100px
+        .wrapper 
+            padding-left: 25px
+
+        &__title
+            font-size: 22px
+            line-height: 50px
+            width: 270px
+
+
+    .about
+        padding-top: 80px
+
+        &__wrapper
+            grid-template: 400px / 1fr
+            grid-auto-rows: minmax(250px, auto) minmax(100px, auto)
+
+        &__photo
+            grid-row: unset
+
+        &__descr
+            padding-top: 25px
+
+        &__subtitle
+            font-size: 31px
+
+        &__text
+            font-size: 15px
+            span.links
+                display: none
+            span.oben
+                display: inline
+
+
+        &__skills
+            padding-top: 10px
+            grid-template-columns: 250px 1fr
+            column-gap: 20px
+            grid-template-rows: minmax(80px, auto)
+
+            &-text
+                font-size: 14px
+
+
+    .resume
+        &__wrapper
+            width: 450px
+            margin: 0 auto
+            grid-template: 1fr / 100%
+            grid-auto-rows: minmax(500px, auto) minmax(300px, auto)
+            row-gap: 10px
+
+
+    .use
+        &__wrapper
+            width: 525px
+            padding: 50px 0 100px 0
+            grid-template-columns: repeat(2, 255px)
+            gap: 15px 15px
+
+            &-item
+                padding: 30px 15px 25px 15px
+
+
+    .skills_percent
+
+        &__skills-wrapper
+            grid-template-columns: repeat(2, 255px)
+            column-gap: 30px
+    
+
+
+    .portfolio
+
+        &__wrapper
+            grid-template-columns: 540px
+            grid-template-rows: 230px
+            a
+                .grid
+                    figure
+                        background: black
+                        figcaption
+
+                            h2
+                            padding-top: 0
+                            font-weight: 300
+                            font-size: 20px
+
+                            p 
+                                display: block
+                                padding: 20px 2.5em
+                                transform: translate3d(0,20px,0)
+                                margin: 0
+                                letter-spacing: 1px
+                                font: 300 12px/1.8 'Raleway', sans-serif
+                                opacity: 1
+                                transform: translate3d(0,0,0)
+
+                            &::before, &::after
+                                opacity: 1
+                                transition: opacity 0.35s, transform 0.35s
+                                transform: inherit
+                                position: absolute
+                                height: 195px
+                                /** width: auto **/
+                                top: 15px
+                                right: 15px
+                                left: 15px
+
+                            &::before
+                                border-top: 1px solid #fff
+                                border-bottom: 1px solid #fff
+                                
+
+                            &::after 
+                                border-right: 1px solid #fff
+                                border-left: 1px solid #fff
+
+
+
+
+    .reviews
+        &__carousel 
+            width: 80%
+
+
+    .contacts
+        &__wrapper
+            width: 500px
+            margin: 0 auto
+            grid-template-columns: 500px;
+            grid-template-rows: 600px auto;
+            row-gap: 20px
+
+        &__form
+            grid-template-columns: 245px 245px
+            grid-template-rows: 45px 190px 45px
+            row-gap: 25px
+
+        &__input
+
+            &-2
+                grid-row: 1/2
+
+
+
+
+
+
+@media  (max-width: 575px)
+    .container
+        width: 95%
+
+    .title
+        &_fz48
+            font-size: 26px
+
+        &_fz36
+            font-size: 25px
+            margin-top: 15px
+            line-height: 40px
+
+
+    .menu
+        &__block
+            width: 250px
+            padding-left: 20px
+
+        &__list
+            padding-left: 20px
+
+        &__link
+            font-size: 19px
+            line-height: 31px
+            &::before
+                left: -25px
+
+    .promo
+
+        background: url('../img/mobile_bg-min.jpg') no-repeat 33%/cover;
+        .wrapper
+            width: 270px
+            margin: 0 auto
+            padding-left: 0
+
+        &__title
+            font-size: 20px
+
+        &__btns
+            justify-content: space-around
+
+        .scroll-down 
+            border: 2px solid #000
+            
+
+
+
+    .about
+        padding: 50px 7px 0 7px
+
+        &__wrapper
+            grid-template: 340px auto auto / 1fr
+
+        &__subtitle
+            font-size: 25px
+
+        &__skills
+            grid-template-columns: 1fr
+
+
+    .resume
+        padding-top: 80px
+        &__wrapper
+            width: 95%
+            padding-top: 40px
+
+        &__subtitle
+            line-height: 43px
+
+
+
+    .use
+        padding-top: 80px
+        &__wrapper
+            width: 270px
+            grid-template-columns: 270px 
+            padding-bottom: 80px
+
+
+    .skills_percent
+        &__skills-wrapper
+            width: 300px
+            margin: 0 auto
+            grid-template-columns: 300px
+            padding: 0 3px 
+            padding-top: 30px
+
+
+
+
+    .portfolio
+        padding: 80px 5px 0 5px
+
+        &__wrapper
+            width: 290px
+            margin: 0 auto
+            grid-template-columns: 290px
+            grid-template-rows: 180px
+            grid-auto-rows: 180px
+            row-gap: 25px
+
+
+            a
+                .grid
+                    height: 100%
+                    figure
+                        height: 100%
+                        background: black
+                        &:hover
+                            figcaption
+
+                                p
+                                    transition: opacity 0.35s, transform 0.35s
+                                    opacity: 0.0
+
+                        img
+                            height: 100%
+                        figcaption
+                            top: 50px
+                            padding: 0
+
+                            h2
+                                padding-top: 10px
+                            p 
+                                opacity: 0
+                            &::before, &::after
+                                opacity: 1
+                                top: -34px
+                                height: 150px
+
+
+
+    .reviews
+        &__carousel 
+            width: 300px
+
+            .reviews__item
+                padding: 30px 5px
+                grid-template-columns: 95px auto 40px
+                .name
+                    font-size: 18px
+                .photo
+                    width: 85px
+            .slick-prev
+                position: absolute
+                bottom: -90px
+                top: auto
+                transform: inherit
+                left: 50px
+                border: none
+                background-color: #fff
+
+            .slick-next
+                position: absolute
+                bottom: -90px
+                top: auto
+                transform: inherit
+                right: 50px
+                border: none
+                background-color: #fff
+        &__text
+            width: 95%
+            margin: 0 auto
+
+
+    .contacts
+        padding: 120px 5px 80px 5px 
+        &__wrapper
+            width: 290px
+            grid-template-columns: 290px
+            grid-template-rows: 400px auto
+            row-gap: 20px
+
+        &__form
+            grid-template-columns: 290px 
+            grid-template-rows: 45px 45px 190px 45px
+            row-gap: 25px
+
+        &__input
+            &-1
+                grid-row: 1/2
+            &-2
+                grid-row: 2/3
+
+        &__triggers
+            grid-template-columns: 1fr
+            grid-template-rows: 45px 1fr
+            row-gap: 15px
+            .btn
+                margin-left: auto
+                grid-row: 2/3
+
+            .contact__policy
+                grid-row: 1/2
+
+
+    .overlay
+        .modal
+            &__close
+                top: -35px
+                right: 5px
+
+    

@@ -1,0 +1,49 @@
+.skills_percent
+    &__skills-wrapper
+        padding-top: 60px
+        display: grid
+        grid-template-columns: repeat(3, 350px)
+        grid-template-rows: repeat(2, 200px)
+        grid-auto-rows: minmax(70px, auto)
+        gap: 30px 45px
+        &-item
+            display: grid
+            grid-template-rows: 140px 14px
+            gap: 27px
+            .chart 
+                display: inline-block
+                height: 140px
+                position: relative
+                text-align: center
+                width: 140px
+                margin: 0 auto
+
+            .chart canvas 
+
+            .percent
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                font-size: 25px
+                font-weight: 300
+                &::after
+                    content: "%"
+                    font-size: 50%
+                    margin-left: 0.1em
+
+            .skill-name
+                text-align: center
+                span
+                    position: relative
+                    padding-top: 2px
+                    font-weight: bold
+                    font-size: 14px
+                    text-transform: uppercase
+            .skill-index
+                border-radius: 4px
+                background: #E8E4DE
+                &-orange
+                    height: 100%
+                    background: $main-color
+                    border-radius: 4px

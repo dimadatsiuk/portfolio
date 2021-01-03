@@ -1,0 +1,58 @@
+.decisions
+    min-height: 889px
+    padding: 70px 0 61px 0
+    background: url(../img/decisions/decisions_bg.png) center (center / cover) no-repeat
+
+    .decisions__menu__wrapper
+            max-width: 843px
+            height: 60px
+            border: 1px solid #fff
+            border-radius: 6px
+            margin: 0 auto
+            margin-top: 20px
+            .decisions__menu__items
+                display: flex
+                justify-content: space-between
+                padding: 0
+                margin: 0
+                font-size: 14px
+                font-weight: 300
+                color: #fff
+                
+                .decisions__menu__item
+                    list-style-type: none
+                    height: 50px
+                    padding: 0 26px
+                    line-height: 52px
+                    margin: 5px 0
+                    cursor: pointer
+                    border-right: 1px solid #8ca2a7
+                    &:nth-last-child()
+                        border: none
+                    &:hover
+                        color: $main-color
+
+    .carousel
+        position: relative
+        width: 947px
+        margin: 0 auto
+        margin-top: 35px
+
+        .slick-prev, .slick-next
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: -29px  
+            background-color: rgba(255, 255, 255, 0)
+            border: none
+            img
+                width: 18px
+                height: 60px
+
+        .slick-next
+            right: -29px
+            left: auto 
+
+        
+            
+

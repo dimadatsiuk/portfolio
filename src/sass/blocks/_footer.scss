@@ -1,0 +1,179 @@
+.footer {
+    padding: 20px;
+    min-height: 100px;
+    border-top: 1px solid #FFA501;
+    .heart {
+        text-align: center;
+        margin-bottom: 0;
+        @keyframes heartbeat {
+            form {
+                -webkit-transform:scale(1);
+                transform:scale(1)
+            }
+            50% {
+                -webkit-transform:scale(1.4);
+                transform:scale(1.4)
+            }
+            to {
+                -webkit-transform:scale(1);
+                transform:scale(1)
+            }
+        }
+        .heartbeat {
+            margin: 0 3px;
+            animation-name: heartbeat;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        
+    }    
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 49% 49%;
+        column-gap: 2%;
+
+        .copyright {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 0;
+            /* span {
+                margin-top: 15px;
+            } */
+            a {
+                color: #FFA501;
+                border-bottom: 1px dotted #000;
+                text-decoration: none;
+            }
+        }
+        .timer__wrapper {
+            display: grid;
+            grid-template-columns: 80px 270px 165px;
+            .timer__title {
+                text-align: center;
+                margin-top: 15px;
+            }
+            .timer {
+                /* margin-top: 60px; */
+                /* padding-left: 95px; */
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                &__block {
+                    width: 42px;
+                    height: 51px;
+                    background: #FFFFFF;
+                    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+                    font-size: 9px;
+                    font-weight: 300;
+                    text-align: center;
+                    span {
+                        display: block;
+                        margin-top: 10px;
+                        margin-bottom: 5px;
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+
+@media (max-width : 1200px) {
+    .footer {
+        &__wrapper {
+            margin-top: 10px;
+            grid-template-columns: 59% 29%;
+            .copyright {
+                margin-top: 44px;
+            }
+            .timer__wrapper {
+                display: grid;
+                grid-template-columns: none;
+                .timer__title {
+                    margin-top: 0;
+                }
+                .timer {
+                    width: 100%;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 991px) {
+    .footer {
+        &__wrapper {
+
+            grid-template-columns: none;
+            .copyright {
+                width: 80%;
+                margin: 20px auto 0 auto;
+            }
+            .timer__wrapper {
+                grid-template-columns: 80px 270px 150px;
+                margin: 20px auto 0 auto;
+                .timer__title {
+                    margin-top: 22px;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media  (max-width: 767px) {
+    .footer {
+        &__wrapper {
+            
+            grid-template-columns: none;
+            .copyright {
+                font-size: 13px;
+                width: 85%;
+                margin: 20px auto 0 auto;
+            }
+            .timer__wrapper {
+                grid-template-columns: 86px 230px 150px;
+            }
+        }
+    }
+    .pageup {
+        right: 15px;
+    }
+
+}
+
+@media  (max-width: 575px) {
+    .footer {
+        padding: 15px 0;
+        &__wrapper {
+            grid-template-columns: 100%;
+            .copyright {
+                width: 100%;
+                font-size: 10px;
+                margin-top: 15px;
+                justify-content: space-between;
+            }
+            .timer__wrapper {
+                grid-template-columns: none;
+                margin: 15px 0;
+                .timer__title {
+                    font-size: 11px;
+                    margin: 0;
+                }
+                .timer {
+                    width: 80%;
+                    margin: 15px auto;
+            }
+
+            }
+        }
+    }
+}
