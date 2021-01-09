@@ -94,6 +94,8 @@
                     <li class="menu__link"><a href="#portfolio">Meine Projecte</a></li>
                     <li class="menu__link"><a href="#reviews">Bewertungen</a></li>
                     <li class="menu__link"><a href="#contacts">Kontakt</a></li>
+                    <span class="webAd">Web-Anwendung:</span>
+                    <li class="menu__link" id="calculator">Calculator</li>
                 </ul>
             </nav>
 
@@ -692,6 +694,25 @@
             <div class="modal__descr">
                 Ich kontaktiere Sie in der allernächsten Zeit
             </div>
+        </div>
+
+
+
+        <div class="modal modal__calc">
+            <div class="modal__close">
+                &times;
+            </div>
+            <div class="modal__subtitle">Converter to another calculation system</div>
+            <form name="form_calc" class="form_calc">
+                <div class="question">To which calculation system (between 2 and 36) do you want to convert your number?</div>
+                <input type="text" name="whichCalcSystem" id="whichCalcSystem" placeholder="calculation system"> 
+                <div class="question">Which number do you want to convert in your calculation system</div>
+                <input type="text" name="number" id="number" placeholder="enter your number">
+                <button id="submitCalc" class="btn contacts__btn">Get result</button>
+            </form>
+
+            <!-- <div class="result"></div> -->
+            <button id="nextOne" class="btn contacts__btn">One more time</button>
         </div>
     </div>
 

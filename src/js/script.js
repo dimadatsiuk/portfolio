@@ -4,12 +4,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const hamburger = document.querySelector('.hamburger'),
-        menu = document.querySelector('.menu'),
-        closeElem = document.querySelector('.menu__close'),
-        menuItem = document.querySelectorAll('.menu__link'),
-        menuOverlay = document.querySelector('.menu__overlay');
+          menu = document.querySelector('.menu'),
+          closeElem = document.querySelector('.menu__close'),
+          menuItem = document.querySelectorAll('.menu__link'),
+
+          //
+          
+          //
+          menuOverlay = document.querySelector('.menu__overlay');
 
 
+
+   /*  function letOrStopScroll () {
+        if (menu.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    } */
 
     function letOrStopScroll () {
         if (menu.classList.contains('active')) {
@@ -19,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    
     hamburger.addEventListener('click', () => {
         menu.classList.add('active');
         letOrStopScroll();
@@ -51,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
             letOrStopScroll();
         });
     });
+
+
+    //hallo
 
     console.log('ich wollte nur mal hallo dir sagen, wenn du das liest');
 
@@ -231,6 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }).done(function () {
             $(this).find("input textarea").val("");
             $('.overlay, #thanks').fadeIn('slow');
+            $('body').css('overflow', 'hidden');
+           
 
             $('form').trigger('reset');
 
@@ -239,9 +257,13 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     });
 
-    $('.modal__close').on('click', function () {
-        $('.overlay, #thanks').fadeOut('slow')
-    });
+    /* $('.modal__close').on('click', function () {
+        $('.overlay, #thanks').fadeOut('slow');
+
+        
+    }); */
+
+    
 
 
 
@@ -253,10 +275,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - Date.parse(new Date()),
-            days = Math.floor(t / (1000 * 60 * 60 * 24)),
-            hours = Math.floor((t / (1000 * 60 * 60) % 24)),
-            minutes = Math.floor((t / 1000 / 60) % 60),
-            seconds = Math.floor((t / 1000) % 60);
+              days = Math.floor(t / (1000 * 60 * 60 * 24)),
+              hours = Math.floor((t / (1000 * 60 * 60) % 24)),
+              minutes = Math.floor((t / 1000 / 60) % 60),
+              seconds = Math.floor((t / 1000) % 60);
 
         return {
             'total': t,
@@ -306,5 +328,75 @@ document.addEventListener('DOMContentLoaded', () => {
     setClock('.timer', deadline);
 
 
+  //------ calc
+    const calcTrigger = document.querySelector('#calculator'),
+          calcOverlay = document.querySelector('.overlay'),
+          calcModal = document.querySelector('.modal__calc'),
+          formCalc = document.querySelector('.form_calc'),
+          getResult = document.querySelector('#submitCalc'),
+          nextOne = document.querySelector('#nextOne'),
+          result = document.createElement('div'),
+          modalClose = document.querySelectorAll('.modal__close'),
+          
+        //
+        
+          thanks = document.querySelector('#thanks');
 
+    nextOne.style.display = 'none';
+    result.classList.add('result');
+          
+    calcTrigger.addEventListener('click', () => {
+        calcOverlay.style.display = 'block';
+        calcModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+
+    getResult.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const errorType = 'Error, you have entered fals data', 
+              errorNumber = 'Error, index of calculation system has to be between 2 and 36',
+              whichCalcSystem = +document.querySelector('#whichCalcSystem').value,
+              number =  +document.querySelector('#number').value;
+
+        formCalc.after(result);
+
+        formCalc.reset();
+    
+        formCalc.style.display = 'none';
+        nextOne.style.display = 'block';
+    
+        if (whichCalcSystem >= 2 && whichCalcSystem <= 36) {
+            result.innerHTML = ` 
+                Your number   <span class="blue result__numbers">${number} </span>   in calculation system <span class="red result__numbers">${whichCalcSystem}  </span>     
+                <br> is  <span class="green result__numbers">${number.toString(whichCalcSystem)} </span>
+            `;
+        } else if (whichCalcSystem == '' || whichCalcSystem == undefined || whichCalcSystem == null || typeof(whichCalcSystem) != 'number') {
+            result.innerHTML = `
+                <span class="red">${errorType}</span>
+            `
+        } else {
+            result.innerHTML = `
+                <span class="red">${errorNumber}</span>
+            `
+        }
+    });
+
+    nextOne.addEventListener('click', () => {
+        formCalc.style.display = 'block';
+        nextOne.style.display = 'none';
+        result.textContent = '';
+    });
+
+    modalClose.forEach(item => {
+        item.addEventListener('click', () => {
+            formCalc.style.display = 'block';
+            nextOne.style.display = 'none';
+            calcModal.style.display = '';
+            document.body.style.overflow = '';
+            calcOverlay.style.display = 'none';
+            thanks.style.display = 'none';
+            result.innerHTML = '';
+        });
+    });
 });

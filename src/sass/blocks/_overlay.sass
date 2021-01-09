@@ -5,6 +5,8 @@
     top: 0
     background-color: rgba(0,0,0,.56)
     display: none
+    z-index: 10
+   
 
 .modal
     position: absolute
@@ -37,3 +39,41 @@
 
 #thanks
     display: none
+
+.modal__calc
+    display: none
+    form
+        .question
+            text-align: center
+        input
+            display: block
+            margin: 0 auto
+            border-color: $main-color
+            width: 80%
+            height: 50px
+            display: block
+            margin: 10px auto
+            text-align: center
+
+
+    .result
+        text-align: center
+        &__numbers
+            font-size: 25px
+        .blue
+            color: blue
+
+        .red
+            color: red
+
+        .green
+            color: green
+
+    #nextOne 
+        margin: 10px auto 0 auto
+        display: block
+        padding: 0 20px
+
+    button
+        display: block
+        margin: 0 auto
